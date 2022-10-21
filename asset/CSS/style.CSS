@@ -6,6 +6,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.page {
+  overflow: hidden;
+}
+
 .container {
   margin: auto;
   padding: 0 15px;
@@ -13,13 +17,7 @@ body {
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
@@ -209,9 +207,8 @@ a {
 }
 
 .section--devices {
-  height: 850px;
-  width: 100%;
-  background: url(../Images/feature/picture.jpg) no-repeat center;
+  margin-bottom: 40px;
+  background: url(../Images/feature/picture.jpg) no-repeat center / cover;
 }
 
 .section--map {
@@ -384,7 +381,6 @@ a {
 /*.................Devices.................*/
 .devices {
   width: 100%;
-  height: 635px;
   max-width: 600px;
   margin: 0 auto;
   position: relative;
@@ -396,16 +392,11 @@ a {
   height: auto;
 }
 
-.devices__item--ipad {
-  position: relative;
-  top: 3px;
-  right: 23px;
-}
-
 .devices__item--iphone {
   position: absolute;
-  top: 38%;
-  left: 57%;
+  top: 34%;
+  right: -40px;
+  z-index: 1;
 }
 
 /*.................Services2.................*/
@@ -1211,17 +1202,19 @@ button[type=submit]:hover {
   .testimonial {
     padding: 0 60px;
   }
-  
-  .testimonial_item, .quote_item {
+
+  .testimonial_item,
+  .quote_item {
     padding-left: 175px;
   }
 
-  .testimonial_photo, .quote_icon{
-        width: 150px;
-        height: 150px;
-        top: 0;
+  .testimonial_photo,
+  .quote_icon {
+    width: 150px;
+    height: 150px;
+    top: 0;
   }
-  
+
   /*....Clients....*/
   .clients {
     max-width: 600px;
@@ -1229,11 +1222,11 @@ button[type=submit]:hover {
   }
 
   .clients_item {
-       width: 100%;
-       padding-right: 0;
+    width: 100%;
+    padding-right: 0;
   }
 
-  .clients_item:last-child{
+  .clients_item:last-child {
     margin-bottom: 0;
   }
 
@@ -1241,7 +1234,7 @@ button[type=submit]:hover {
   .footer_col--first {
     width: 100%;
     margin-bottom: 30px;
-  } 
+  }
 
   .footer_col--second,
   .footer_col--third {
@@ -1288,9 +1281,9 @@ button[type=submit]:hover {
 
   .section--devices {
     padding-bottom: 0;
-}
+  }
 
-/*....About....*/
+  /*....About....*/
   .about {
     justify-content: center;
   }
@@ -1351,20 +1344,24 @@ button[type=submit]:hover {
     padding: 0 60px;
   }
 
-  .testimonial_photo, .quote_icon {
+  .testimonial_photo,
+  .quote_icon {
     position: static;
     margin: 0 auto 20px;
   }
 
-  .testimonial_item, .quote_item {
+  .testimonial_item,
+  .quote_item {
     padding-left: 0;
   }
 
-  .testimonial_text, .quote_text {
+  .testimonial_text,
+  .quote_text {
     font-size: 16px;
   }
 
-  .testimonial_author, .quote_author {
+  .testimonial_author,
+  .quote_author {
     font-size: 20px;
   }
 
@@ -1384,7 +1381,7 @@ button[type=submit]:hover {
   }
 
   /*....Footer....*/
-  .footer_col--third, 
+  .footer_col--third,
   .footer_col--second {
     width: 100%;
   }
@@ -1458,73 +1455,72 @@ button[type=submit]:hover {
 
   .clients_item {
     padding-left: 0;
-}
+  }
 
-.clients_photo {
-  position: static;
-  margin: 0 auto 10px;
-}
+  .clients_photo {
+    position: static;
+    margin: 0 auto 10px;
+  }
 
-.clients_job_title::after {
-  margin: 18px auto;
-}
+  .clients_job_title::after {
+    margin: 18px auto;
+  }
 
-/*....Devices....*/
-.devices {
-  max-width: 320px;
-}
+  /*....Devices....*/
+  .devices {
+    max-width: 320px;
+  }
 
-.devices__item--ipad {
-    top: 50%;
-}
-
-.devices__item--iphone {
+  .devices__item--iphone {
     width: 180px;
     bottom: -50px;
     right: -80px;
-}
+  }
 
-/*....Testimonial-Quote....*/
-.testimonial, .quote {
-  padding: 0;
-}
-.testimonial_btn, .quote_btn {
-  top: 18%;
-}
+  /*....Testimonial-Quote....*/
+  .testimonial,
+  .quote {
+    padding: 0;
+  }
 
-/*....Footer....*/
-.footer_inner {
-  padding-bottom: 40px;
-}
+  .testimonial_btn,
+  .quote_btn {
+    top: 18%;
+  }
 
-.blogs_img {
-  width: 80px;
-  height: 50px;
-}
+  /*....Footer....*/
+  .footer_inner {
+    padding-bottom: 40px;
+  }
 
-.blogs_title {
-  font-size: 11px;
-}
+  .blogs_img {
+    width: 80px;
+    height: 50px;
+  }
 
-/*....Subscribe....*/
-.subscribe {
-  flex-wrap: wrap;
-  max-width: none;
-}
+  .blogs_title {
+    font-size: 11px;
+  }
 
-input[type=email],
-button[type=submit] {
-  width: 100%;
-}
+  /*....Subscribe....*/
+  .subscribe {
+    flex-wrap: wrap;
+    max-width: none;
+  }
 
-input[type=email] {
-  margin-bottom: 10px;
-  border-right: 1px solid #e7e7e7;
-}
+  input[type=email],
+  button[type=submit] {
+    width: 100%;
+  }
 
-.copyright {
-  font-size: 13px;
-}
+  input[type=email] {
+    margin-bottom: 10px;
+    border-right: 1px solid #e7e7e7;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 361px) {
@@ -1544,7 +1540,7 @@ input[type=email] {
   }
 
   .main_suptitle {
-      font-size: 25px;
+    font-size: 25px;
   }
 
   .main_title {
@@ -1561,5 +1557,5 @@ input[type=email] {
 
   .slider_item {
     padding: 10px 0 0 0;
-    }
+  }
 }
